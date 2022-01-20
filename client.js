@@ -13,11 +13,15 @@ const connect = function () {
   conn.on("connect", () => {
     console.log("Connection is made.");
     conn.write(`Name: ${clientName}`);
+    // setTimeout(() => {
+    //   conn.write("Move: down");
+    // }, 500)
   });
 
 
   conn.on("data", (data) => {
-    console.log(`Emitted when data is received: ${data}`)
+    console.log(`Emitted when data is received: ${data}`);
+
   });
 
   conn.on("end", () => {
