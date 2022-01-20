@@ -1,5 +1,5 @@
 const net = require("net");
-const clientName = "Mo";
+const clientName = "M_W";
 
 
 const connect = function () {
@@ -11,7 +11,7 @@ const connect = function () {
   conn.setEncoding("utf8");
 
   conn.on("connect", () => {
-    console.log("Emitted when connection is made.");
+    console.log("Connection is made.");
     conn.write(`Name: ${clientName}`);
   });
 
